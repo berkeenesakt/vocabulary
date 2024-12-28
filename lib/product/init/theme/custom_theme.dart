@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:template/product/init/theme/custom_color_scheme.dart';
+import 'package:vocabulary/product/init/theme/custom_color_scheme.dart';
 
 final class CustomLightTheme {
   ThemeData get themeData => ThemeData(

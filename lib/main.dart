@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:template/product/init/app_init.dart';
-import 'package:template/product/init/theme/custom_theme.dart';
-import 'package:template/product/navigation/app_router.dart';
+import 'package:vocabulary/product/init/app_init.dart';
+import 'package:vocabulary/product/init/theme/custom_theme.dart';
+import 'package:vocabulary/product/navigation/app_router.dart';
 
 Future<void> main() async {
   await AppInit.init();

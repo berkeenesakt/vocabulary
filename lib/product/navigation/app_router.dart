@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:template/feature/home/view/home_view.dart';
-import 'package:template/feature/login/view/login_view.dart';
+import 'package:vocabulary/feature/home/view/home_view.dart';
+import 'package:vocabulary/feature/login/view/login_view.dart';
 
 part 'app_router.gr.dart';
 
