@@ -1,0 +1,51 @@
+name: template
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  # Navigation
+  auto_route: ^9.2.2
+
+  # Networking
+  dio: ^5.7.0
+
+  # Core
+  equatable: ^2.0.7
+
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_bloc: ^8.1.6
+
+  # Modules
+  gen:
+    path: module/gen
+  
+  # Utilities
+  google_fonts: ^6.2.1
+
+  # Local Storage
+  hive: ^2.2.3
+
+dev_dependencies:
+  auto_route_generator: ^9.0.0
+  build_runner: ^2.4.13
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^7.0.0
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/app/app_icon.png"
+  min_sdk_android: 21
+  remove_alpha_ios: true
+
+
+flutter:
+  uses-material-design: true
