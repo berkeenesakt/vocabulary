@@ -1,5 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:vocabulary/product/cache/hive_manager.dart';
+import 'package:vocabulary/product/navigation/app_router.dart';
 
 @RoutePage()
 class HomeView extends StatelessWidget {
@@ -7,9 +9,15 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text('Home View'),
+        child: IconButton(
+          onPressed: () {
+            HiveManager.instance.removeToken();
+            context.replaceRoute(const LoginRoute());
+          },
+          icon: const Icon(Icons.logout),
+        ),
       ),
     );
   }

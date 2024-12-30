@@ -31,6 +31,8 @@ dependencies:
 
   # Local Storage
   hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  loader_overlay: ^4.0.4+1
 
 dev_dependencies:
   auto_route_generator: ^9.0.0
