@@ -23,6 +23,7 @@ dependencies:
   flutter_bloc: ^8.1.6
 
   # Modules
+  flutter_card_swiper: ^7.0.2
   gen:
     path: module/gen
   

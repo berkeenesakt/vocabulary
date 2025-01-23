@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:vocabulary/product/cache/hive_manager.dart';
 import 'package:vocabulary/product/init/config/app_environment.dart';
 
 class ServiceManager {
@@ -14,12 +15,21 @@ class ServiceManager {
       ),
     );
 
-    _dio.interceptors.add(
+    _dio.interceptors.addAll([
       LogInterceptor(
         requestBody: true,
         responseBody: true,
       ),
-    );
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          final token = HiveManager.instance.getToken();
+          if (token != null) {
+            options.headers['Authorization'] = 'Bearer $token';
+          }
+          return handler.next(options);
+        },
+      ),
+    ]);
   }
 
   Future<T?> get<T>(
